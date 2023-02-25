@@ -1,10 +1,10 @@
 # Networking
 
-?  
-show ip int bri  
-show privi  
-en  
-exit  
+\> ?  
+\> sh ip int bri  
+\> sh privi  
+\> en  
+\# exit  
 \# conf t  
 () do sh run  
 () end  
@@ -19,7 +19,16 @@ exit
 () line vty 0 15  
 () password \<password\>  
 () login  
+() int vlan 1  
+() ip add \<ip\> \<mask\>  
+() no shutdown  
+() enable password \<password\>  
+ping \<ip\>  
+telnet \<ip\>  
+() ip default-gateway \<ip\>  
+\# write  
+\# copy running-config startup-config  
 
 () int gi0/0  
-router rip  
+() router rip  
   
