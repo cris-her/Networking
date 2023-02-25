@@ -79,6 +79,22 @@ ssh -l \<username\> \<ip\>
 \# sh port-security  
 \# sh port-security int \<interface\>  
 
-
-() router rip  
+() hostname \<name\>  
+() line con 0  
+(l) password \<password\>  
+(l) login  
+() service password-encryption  
+--> cisco encryption 7 decoder  
+() enable secret \<password\>  
+() line vty 0 4  
+(l) password \<password\>  
+(l) login  
+() int \<interface\>  
+(i) ip address \<ip\> \<mask\>  
+(i) no sh  
+() banner motd \<char\> \<message\> \<char\>  
+\# copy running-config startup-config  
+\# sh startup-config  
+\# sh ip route  
   
+() router rip  
