@@ -24,7 +24,7 @@
 () int vlan \<number\>  
 (i) ip add \<ip\> \<mask\>  
 (i) shutdown  
-(i) no shutdown  
+(i) no sh  
 () enable password \<password\>  
 ping \<ip\>  
 telnet \<ip\>  
@@ -49,6 +49,13 @@ ssh -l \<username\> \<ip\>
 (i) switchport mode dynamic auto  
 (i) switchport mode nonegotiate  
 
-() int gi0/0  
+\# sh vlan  
+() vlan \<number\>  
+(v) name \<name\>  
+() int f0/1  
+(i) switchport mode access  
+(i) switchport access vlan \<number\>  
+
+
 () router rip  
   
