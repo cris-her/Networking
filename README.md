@@ -12,7 +12,8 @@
 \<CTRL\>\<SHIFT\>6  
 
 () hostname \<name\>  
-() banner motd \<char\> \<message\> \<char\>  
+() banner motd \<char\>  
+\<message\> \<char\>  
 () line con 0  
 (l) password \<password\>  
 (l) login  
@@ -92,9 +93,19 @@ ssh -l \<username\> \<ip\>
 () int \<interface\>  
 (i) ip address \<ip\> \<mask\>  
 (i) no sh  
-() banner motd \<char\> \<message\> \<char\>  
+() banner motd \<char\>  
+\<message\> \<char\>  
 \# copy running-config startup-config  
 \# sh startup-config  
 \# sh ip route  
-  
+
+() ip route \<network id\> \<mask\> \<next hop/exit interface\>  
+() no ip route \<network id\> \<mask\> \<next hop/exit interface\>  
+
 () router rip  
+(r) ver 2  
+(r) network \<network id\>  
+
+
+
+
