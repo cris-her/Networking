@@ -54,13 +54,13 @@ ssh -l \<username\> \<ip\>
 \# sh vlan  
 () vlan \<number\>  
 (v) name \<name\>  
-() int f0/1  
+() int \<interface\>  
 () int range f0/2-3  
 (i) switchport mode access  
 (i) switchport access vlan \<number\>  
 
 () vtp pruning  
-() int \<interface\>  
+() int gi0/1  
 (i) switchport mode trunk  
 (i) switchport trunk allowed vlan \<all/none/add/remove\> \<number\>  
 (i) switchport trunk native vlan \<number\>  
