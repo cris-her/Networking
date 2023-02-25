@@ -98,6 +98,7 @@ ssh -l \<username\> \<ip\>
 \# copy running-config startup-config  
 \# sh startup-config  
 \# sh ip route  
+\# sh ip int \<interface\>  
 
 () ip route \<network id\> \<mask\> \<next hop/exit interface\>  
 () no ip route \<network id\> \<mask\> \<next hop/exit interface\>  
