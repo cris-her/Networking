@@ -157,7 +157,7 @@ gi0/0
 --> modern syntax  
 () ip access-list standart \<ACL_No./Name\>  
 (s) \<deny/permit\> \<matching parameters\>  
---> extended
+--> extended  
 () ip access-list extended \<ACL_No./Name\>  
 (e) \<deny/permit\> \<Protocol\> \<Source IP\> \<Wildcard Mask\> [Protocol Info] \<Destination IP\> \<Wildcard Mask\> [Protocol Info]  
 
