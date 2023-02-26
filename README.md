@@ -60,6 +60,17 @@ ssh -l \<username\> \<ip\>
 (i) switchport mode access  
 (i) switchport access vlan \<number\>  
 
+sw() int \<interface\>  
+sw(i) switchport mode trunk  
+rtr() int \<interface\>  
+rtr(i) no ip ad  
+rtr(i) no sh  
+rtr(i) ex  
+rtr() int \<interface\>.\<number\>  
+rtr(si) encapsulation dot1q vlan \<number\>  
+rtr(si) ip add \<ip\> \<mask\>  
+rtr(si) description \<description\>  
+
 () vtp pruning  
 () int gi0/1  
 (i) switchport mode trunk  
@@ -107,16 +118,24 @@ ssh -l \<username\> \<ip\>
 (r) ver 2  
 (r) network \<network id\>  
 
-sw() int \<interface\>  
-sw(i) switchport mode trunk  
-rtr() int \<interface\>  
-rtr(i) no ip ad  
-rtr(i) no sh  
-rtr(i) ex  
-rtr() int \<interface\>.\<number\>  
-rtr(si) encapsulation dot1q vlan \<number\>  
-rtr(si) ip add \<ip\> \<mask\>  
-rtr(si) description \<description\>  
+() router ospf \<process \#\>  
+(r) network \<network id\> \<wcm\> area \<\#\>  
+\# show ip protocols  
+\# show ip ospf  
+\# show ip ospf interface  
+\# show ip ospf neighbor  
+\# show ip ospf database  
+
+() router eigrp \<\#\>  
+\# sh run  
+\# sh ip protocols  
+\# sh ip eigrp interface  
+\# show ip eigrp neighbor  
+\# show ip eigrp topology  
+
+--> cisco hdlc config  
+The default encapsulation for Serial Link  
+Only need to Enable the link and configura IP Address  
 
 ipconfig  
 () int g0/0  
@@ -164,7 +183,3 @@ gi0/0
 --> apply the ACL  
 () int \<type & slot\#\>  
 (i) ip access-group \<ACL_No./Name\> \<in/out\>  
-
-
-
-
