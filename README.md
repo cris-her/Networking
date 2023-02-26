@@ -136,6 +136,35 @@ gi0/0
 () int \<interface\>  
 (i) ipv6 rip \<name\> enable  
 
+() int \<interface\>  
+(i) ip add \<ip\> \<mask\>  
+(i) no sh  
+() ip dhcp pool \<name\>  
+(d) default-router \<gateway ip\>  
+(d) network \<network\> \<mask\>  
+(d) dns-server \<dns ip\>  
+() ip dhcp excluded-address \<from ip\> \<to ip\>  
+
+--> dhcp relay server  
+() int \<interface\>  
+(i) ip helper-address \<dhcp server ip\>  
+
+--> classic syntax  
+() access-list \<ACL_No\> \<deny/permit\> \<matching parameters\>  
+--> extended  
+() access-list \<ACL_No\> \<deny/permit\> \<Protocol\> \<Source IP\> \<Wildcard Mask\> [Protocol Info] \<Destination IP\> \<Wildcard Mask\> [Protocol Info]  
+
+--> modern syntax  
+() ip access-list standart \<ACL_No./Name\>  
+(s) \<deny/permit\> \<matching parameters\>  
+--> extended
+() ip access-list extended \<ACL_No./Name\>  
+(e) \<deny/permit\> \<Protocol\> \<Source IP\> \<Wildcard Mask\> [Protocol Info] \<Destination IP\> \<Wildcard Mask\> [Protocol Info]  
+
+--> apply the ACL  
+() int \<type & slot\#\>  
+(i) ip access-group \<ACL_No./Name\> \<in/out\>  
+
 
 
 
