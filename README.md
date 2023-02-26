@@ -127,6 +127,7 @@ rtr(si) description \<description\>
 \# show ip ospf database  
 
 () router eigrp \<\#\>  
+(r) network \<network id\> \<inverted mask\>  
 \# sh run  
 \# sh ip protocols  
 \# sh ip eigrp interface  
