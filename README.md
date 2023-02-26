@@ -118,3 +118,24 @@ rtr(si) encapsulation dot1q vlan \<number\>
 rtr(si) ip add \<ip\> \<mask\>  
 rtr(si) description \<description\>  
 
+ipconfig  
+() int g0/0  
+(i) ipv6 address 2001:120:1:1::1/64  
+(i) ipv address FE80::1 link-local  
+(i) ipv address 2010::/64 eui-64  
+(i) no sh  
+\# sh ipv int bri  
+\# sh ipv route  
+\# sh ipv int g0/0  
+\# ping FE80::290:2BFF:FE52:6901  
+gi0/0  
+
+() ipv route 2001:11::0/64 2001:120:1:1::1 ?  
+() ipv unicast routing  
+
+() int \<interface\>  
+(i) ipv6 rip \<name\> enable  
+
+
+
+
