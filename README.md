@@ -67,7 +67,7 @@ rtr(i) no ip ad
 rtr(i) no sh  
 rtr(i) ex  
 rtr() int \<interface\>.\<number\>  
-rtr(si) encapsulation dot1q vlan \<number\>  
+rtr(si) encapsulation dot1q \<number\>  
 rtr(si) ip add \<ip\> \<mask\>  
 rtr(si) description \<description\>  
 
