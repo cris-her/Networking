@@ -117,6 +117,7 @@ rtr(si) description \<description\>
 () router rip  
 (r) ver 2  
 (r) network \<network id\>  
+(r) no auto-summary  
 
 () router ospf \<process \#\>  
 (r) network \<network id\> \<wcm\> area \<\#\>  
