@@ -119,7 +119,8 @@ rtr(si) description \<description\>
 (r) network \<network id\>  
 (r) no auto-summary  
 \# debug ip rip  
-  
+\# undebug all  
+
 () router ospf \<process \#\>  
 (r) network \<network id\> \<wcm\> area \<\#\>  
 \# show ip protocols  
