@@ -129,13 +129,14 @@ rtr(si) description \<description\>
 \# show ip ospf interface  
 \# show ip ospf neighbor  
 \# show ip ospf database  
+\# clear ip ospf process  
 
 () router eigrp \<\#\>  
 (r) network \<network id\> \<inverted mask\>  
 \# sh run  
 \# sh ip protocols  
 \# sh ip eigrp interface  
-\# show ip eigrp neighbor  
+\# show ip eigrp neighbors  
 \# show ip eigrp topology  
 
 --> cisco hdlc config  
