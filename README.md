@@ -126,7 +126,7 @@ rtr(si) description \<description\>
 (r) network \<network id\> \<wcm\> area \<\#\>  
 \# show ip protocols  
 \# show ip ospf  
-\# show ip ospf interface  
+\# show ip ospf interfaces  
 \# show ip ospf neighbor  
 \# show ip ospf database  
 \# clear ip ospf process  
@@ -135,7 +135,7 @@ rtr(si) description \<description\>
 (r) network \<network id\> \<inverted mask\>  
 \# sh run  
 \# sh ip protocols  
-\# sh ip eigrp interface  
+\# sh ip eigrp interfaces  
 \# show ip eigrp neighbors  
 \# show ip eigrp topology  
 
