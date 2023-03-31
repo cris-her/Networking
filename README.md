@@ -117,8 +117,8 @@ rtr(si) description \<description\>
 tracert  
 () int se0/2/0  
 (i) encapsulation \<ppp/hdlc\>  
-# show controller se0/2/0  
-# show arp  
+\# show controller se0/2/0  
+\# show arp  
 
 () router rip  
 (r) ver 2  
