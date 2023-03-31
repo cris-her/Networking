@@ -114,6 +114,12 @@ rtr(si) description \<description\>
 () ip route \<network id\> \<mask\> \<next hop/exit interface\>  
 () no ip route \<network id\> \<mask\> \<next hop/exit interface\>  
 
+tracert  
+() int se0/2/0  
+(i) encapsulation \<ppp/hdlc\>  
+# show controller se0/2/0  
+# show arp  
+
 () router rip  
 (r) ver 2  
 (r) network \<network id\>  
@@ -139,11 +145,7 @@ rtr(si) description \<description\>
 \# show ip eigrp neighbors  
 \# show ip eigrp topology  
 
---> cisco hdlc config  
-The default encapsulation for Serial Link  
-Only need to Enable the link and configura IP Address  
-
-ipconfig  
+ipconfig /all  
 () int g0/0  
 (i) ipv6 address 2001:120:1:1::1/64  
 (i) ipv address FE80::1 link-local  
